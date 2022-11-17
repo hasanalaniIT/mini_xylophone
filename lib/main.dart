@@ -7,11 +7,19 @@ class Xylophone extends StatelessWidget {
   const Xylophone({super.key});
 
   void playAudio(String sound) async {
+    /// Function to make an instance of AudioPlayer.
+    ///
     final player = AudioPlayer();
     await player.play(AssetSource('sounds/$sound.wav'));
   }
 
   Expanded keyGenerator({required String sound, required Color color}) {
+    /// Factory to generate new key.
+    ///
+    /// takes string the sound audio to be played.
+    /// takes Color the color to be used.
+    /// returns an Expanded TextButton.
+    ///
     return Expanded(
         child: TextButton(
           style: TextButton.styleFrom(
@@ -28,7 +36,7 @@ class Xylophone extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        backgroundColor: Colors.black,
+        backgroundColor: Colors.black87,
         body: SafeArea(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.stretch,
