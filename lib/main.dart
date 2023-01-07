@@ -35,6 +35,7 @@ class Xylophone extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       home: Scaffold(
         backgroundColor: Colors.black87,
         body: SafeArea(
